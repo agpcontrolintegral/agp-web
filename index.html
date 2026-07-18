@@ -173,7 +173,8 @@
 
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="brand-v3.css?v=3.0.2">
-  <link rel="stylesheet" href="motion-v3.css?v=3.0.2">
+  <link rel="stylesheet" href="motion-v3.css?v=3.1">
+  <link rel="stylesheet" href="visual-v3.css?v=3.1">
 
   <script>
     (() => {
@@ -258,27 +259,18 @@
           </div>
         </div>
 
-        <div class="hero-card">
-          <div class="hero-card-top">
-            <span class="status-dot"></span>
-            <span>Evaluación inicial</span>
-          </div>
-          <div class="metric-card">
-            <span>Tipo de servicio</span>
-            <strong>Inventario físico</strong>
-          </div>
-          <div class="metric-card">
-            <span>Modalidad</span>
-            <strong>Servicio adaptado a tu negocio</strong>
-          </div>
-          <div class="metric-card">
-            <span>Entregable</span>
-            <strong>Resultados claros y archivo digital</strong>
-          </div>
-          <div class="hero-card-footer">
-            <span>Cuéntanos lo que necesitas y recibe una evaluación personalizada.</span>
-            <a href="#diagnostico">Empezar →</a>
-          </div>
+        <div class="hero-visual">
+          <figure class="hero-photo-frame">
+            <img src="agp-inventario.webp" alt="Especialista realizando un inventario con escáner" loading="eager" fetchpriority="high">
+            <div class="hero-photo-overlay"></div>
+            <figcaption>
+              <span class="live-dot"></span>
+              <div><small>Operación controlada</small><strong>Conteo con trazabilidad digital</strong></div>
+            </figcaption>
+          </figure>
+          <div class="floating-stat stat-one"><span>Precisión operativa</span><strong>Control por código</strong></div>
+          <div class="floating-stat stat-two"><span>Entregable</span><strong>Base consolidada</strong></div>
+          <div class="floating-badge">AGP · Análisis, gestión y precisión</div>
         </div>
       </div>
     </section>
@@ -292,20 +284,23 @@
         </div>
 
         <div class="cards-grid">
-          <article class="service-card">
+          <article class="service-card service-card-media">
+            <div class="service-image"><img src="agp-inventario.webp" alt="Inventario físico con escáner" loading="lazy"><span>Inventarios</span></div>
             <div class="icon-box">01</div>
             <h3>Inventario de mercadería</h3>
             <p>Conteo físico, captura por código, consolidación, diferencias y base final.</p>
             <ul><li>Retail y almacenes</li><li>Conteos generales o cíclicos</li><li>Operaciones multisede</li></ul>
           </article>
-          <article class="service-card featured">
+          <article class="service-card featured service-card-media">
             <span class="tag">Más solicitado</span>
+            <div class="service-image"><img src="agp-activos.webp" alt="Control y registro de activos" loading="lazy"><span>Activos</span></div>
             <div class="icon-box">02</div>
             <h3>Control de activos fijos</h3>
             <p>Levantamiento, identificación, ubicación, estado y conciliación de activos.</p>
             <ul><li>Etiquetado y codificación</li><li>Registro fotográfico opcional</li><li>Base patrimonial estructurada</li></ul>
           </article>
-          <article class="service-card">
+          <article class="service-card service-card-media">
+            <div class="service-image"><img src="agp-almacen.webp" alt="Almacén organizado para auditoría operativa" loading="lazy"><span>Auditoría</span></div>
             <div class="icon-box">03</div>
             <h3>Auditoría operativa</h3>
             <p>Revisión independiente de procesos, existencias, diferencias y oportunidades de mejora.</p>
@@ -315,8 +310,40 @@
       </div>
     </section>
 
+    <section class="section sectors" id="sectores">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow dark">Sectores atendidos</span>
+          <h2>Una metodología adaptable a cada tipo de operación</h2>
+          <p>Desde pequeños comercios hasta almacenes de mayor escala, ajustamos el equipo, el horario y los entregables al contexto real.</p>
+        </div>
+        <div class="sector-gallery">
+          <article class="sector-card sector-main">
+            <img src="agp-almacen.webp" alt="Almacén con productos organizados" loading="lazy">
+            <div class="sector-overlay"></div>
+            <div class="sector-copy"><span>Almacenes y logística</span><strong>Control de grandes volúmenes y operaciones multisede.</strong></div>
+          </article>
+          <article class="sector-card">
+            <img src="agp-inventario.webp" alt="Inventario en tienda y retail" loading="lazy">
+            <div class="sector-overlay"></div>
+            <div class="sector-copy"><span>Retail y pequeños comercios</span><strong>Conteos rápidos, ordenados y accesibles.</strong></div>
+          </article>
+          <article class="sector-card">
+            <img src="agp-activos.webp" alt="Control de activos y productos codificados" loading="lazy">
+            <div class="sector-overlay"></div>
+            <div class="sector-copy"><span>Farmacias y activos</span><strong>Trazabilidad, lotes, vencimientos y ubicación.</strong></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section process" id="metodologia">
-      <div class="container process-layout">
+      <div class="container process-layout process-layout-visual">
+        <div class="process-photo">
+          <img src="agp-almacen.webp" alt="Operación de inventario en almacén" loading="lazy">
+          <div class="process-photo-shade"></div>
+          <div class="process-photo-label"><span>Metodología AGP</span><strong>Planeamiento, ejecución y control de calidad.</strong></div>
+        </div>
         <div class="section-heading left">
           <span class="eyebrow dark">Metodología AGP</span>
           <h2>No solo contamos. Validamos, analizamos y entregamos control.</h2>
@@ -503,7 +530,7 @@
         <a href="login.html">Portal AGP</a>
         <small>Acceso para clientes y colaboradores</small>
       </div>
-      <span>© <span id="year"></span> AGP Control Integral · AGP Platform 3.0.2 · Motion</span>
+      <span>© <span id="year"></span> AGP Control Integral · AGP Platform 3.1 · Visual Experience</span>
     </div>
   </footer>
 
@@ -598,7 +625,10 @@
         ".diagnosis-form",
         ".diagnosis-benefits",
         ".contact-box",
-        ".footer-layout > *"
+        ".footer-layout > *",
+        ".service-image",
+        ".sector-card",
+        ".process-photo"
       ];
 
       const elements = document.querySelectorAll(candidates.join(","));
@@ -616,6 +646,27 @@
       }, { threshold: 0.13, rootMargin: "0px 0px -6% 0px" });
 
       elements.forEach(el => observer.observe(el));
+
+
+      const depthElements = document.querySelectorAll(".hero-photo-frame img, .process-photo img, .sector-card img");
+      let ticking = false;
+      const updateDepth = () => {
+        const viewport = window.innerHeight || 800;
+        depthElements.forEach(img => {
+          const rect = img.parentElement.getBoundingClientRect();
+          const center = rect.top + rect.height / 2;
+          const progress = (center - viewport / 2) / viewport;
+          img.style.setProperty("--depth-y", `${Math.max(-18, Math.min(18, progress * -22))}px`);
+        });
+        ticking = false;
+      };
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          requestAnimationFrame(updateDepth);
+          ticking = true;
+        }
+      }, { passive:true });
+      updateDepth();
 
       const whatsapp = document.getElementById("floatingWhatsapp");
       if (whatsapp) {

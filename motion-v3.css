@@ -123,3 +123,19 @@ body.agp-ready{opacity:1;transition:opacity 260ms ease}
   }
   .reveal-on-scroll{opacity:1!important;transform:none!important;filter:none!important}
 }
+
+.hero-visual{animation:visualEnter 900ms cubic-bezier(.22,.8,.22,1) both 360ms}
+@keyframes visualEnter{
+  from{opacity:0;transform:translateX(34px) scale(.96)}
+  to{opacity:1;transform:translateX(0) scale(1)}
+}
+.service-image.reveal-on-scroll,
+.sector-card.reveal-on-scroll,
+.process-photo.reveal-on-scroll{
+  transform:translateY(30px) scale(.95);
+}
+.service-image.reveal-on-scroll.is-visible,
+.sector-card.reveal-on-scroll.is-visible,
+.process-photo.reveal-on-scroll.is-visible{
+  transform:translateY(0) scale(1);
+}

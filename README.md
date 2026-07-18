@@ -172,3 +172,18 @@ La nueva navegación:
 - Microinteracciones en botones, tarjetas e iconos.
 - Respeto automático de `prefers-reduced-motion`.
 - Animaciones suaves adicionales en el ERP.
+
+
+## AGP Platform v3.1 — Visual Experience
+- Hero con fotografía operativa y tarjetas flotantes.
+- Fotografías integradas en los tres servicios.
+- Nueva sección de sectores atendidos.
+- Imagen operativa en la metodología.
+- Imágenes guardadas localmente en formato WebP y optimizadas para carga.
+- Zoom progresivo, profundidad por scroll y animaciones de entrada.
+- Tratamiento cromático uniforme con la paleta azul–naranja de AGP.
+- Fuentes visuales de Pexels incluidas localmente para evitar dependencias externas.
+
+
+## v3.2 Flujo comercial
+Lead → Contactado → Calificado → Cliente → Oportunidad → Cotización → Decisión → Proyecto → Cierre.
