@@ -1,0 +1,48 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // Perfil del usuario autenticado.
+    match /users/{userId} {
+      allow read: if signedIn();
+      allow create: if signedIn() && request.auth.uid == userId;
+      allow update: if signedIn() && request.auth.uid == userId;
+      allow delete: if false;
+    }
+
+    // Estado compartido del ERP. Solo usuarios autenticados.
+    match /workspaces/{workspaceId} {
+      allow read, create, update: if signedIn();
+      allow delete: if false;
+    }
+
+    // La web pública puede crear solicitudes, pero no leerlas.
+    match /publicLeads/{leadId} {
+      allow create: if
+        request.resource.data.keys().hasAll([
+          'company',
+          'contact',
+          'phone',
+          'service'
+        ]) &&
+        request.resource.data.company is string &&
+        request.resource.data.contact is string &&
+        request.resource.data.phone is string &&
+        request.resource.data.company.size() > 0 &&
+        request.resource.data.contact.size() > 0 &&
+        request.resource.data.phone.size() >= 6;
+
+      allow read, update, delete: if signedIn();
+    }
+
+    // Todo lo demás queda bloqueado.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

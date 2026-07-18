@@ -1,0 +1,12 @@
+
+:root{--navy:#0D1B2A;--blue:#153A5C;--orange:#FF8A00;--line:#E2E7EC}
+body{background:
+ radial-gradient(circle at 85% 12%,rgba(255,138,0,.23),transparent 24%),
+ linear-gradient(150deg,#08131F,#0D1B2A 55%,#153A5C)!important}
+.login-card{border:1px solid rgba(255,138,0,.18)!important;box-shadow:0 32px 90px rgba(0,0,0,.34)!important}
+.login-card>img{width:min(100%,330px)!important;height:auto!important;max-height:130px!important;object-fit:contain!important}
+.login-heading span{color:#D96F00!important}
+.login-heading h1{color:#0D1B2A!important}
+.login-card input:focus{border-color:#FF8A00!important;box-shadow:0 0 0 4px rgba(255,138,0,.13)!important}
+.login-card button{background:linear-gradient(135deg,#FF980F,#FF7600)!important;box-shadow:0 15px 32px rgba(255,138,0,.26)!important}
+.back{color:#fff!important}

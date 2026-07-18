@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" role="img" aria-labelledby="title">
+<title id="title">AGP Control Integral</title>
+<defs>
+  <linearGradient id="g" x1="0" x2="1">
+    <stop offset="0" stop-color="#2BB7A9"/>
+    <stop offset="1" stop-color="#187D92"/>
+  </linearGradient>
+</defs>
+<rect width="560" height="160" rx="28" fill="none"/>
+<g transform="translate(12 20)">
+  <path d="M48 104 88 20h28l40 84h-30l-7-17H84l-7 17H48Zm45-40h18l-9-24-9 24Z" fill="url(#g)"/>
+  <path d="M172 62c0-27 21-45 49-45 17 0 31 6 40 17l-18 17c-6-7-13-10-21-10-12 0-20 8-20 21 0 14 8 22 21 22 6 0 12-1 17-5v-8h-20V51h47v40c-12 10-29 16-47 16-28 0-48-18-48-45Z" fill="#0B1F33"/>
+  <path d="M287 104V20h42c25 0 41 13 41 35 0 23-16 36-41 36h-13v13h-29Zm29-36h11c9 0 14-4 14-12s-5-12-14-12h-11v24Z" fill="#0B1F33"/>
+  <path d="M395 28h4v82h-4z" fill="#D5E3E8"/>
+  <text x="418" y="62" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#0B1F33">CONTROL</text>
+  <text x="418" y="91" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#187D92">INTEGRAL</text>
+</g>
+</svg>

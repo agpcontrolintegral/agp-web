@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Migración | AGP Platform</title>
+  <link rel="stylesheet" href="login.css">
+  <style>
+    .migration-card{width:min(720px,calc(100% - 28px));background:white;border-radius:22px;padding:30px;box-shadow:0 24px 70px rgba(0,0,0,.2)}
+    pre{background:#f3f7f9;border:1px solid #dbe5ea;padding:18px;border-radius:14px;white-space:pre-wrap}
+    .migration-card button{width:100%;min-height:50px;border:0;border-radius:13px;background:#0b675e;color:white;font-weight:800;cursor:pointer}
+    #migrationStatus{display:block;margin-top:14px;font-weight:700}
+  </style>
+</head>
+<body>
+  <main class="login-page">
+    <section class="migration-card">
+      <a class="back" href="admin.html">← Volver al ERP</a>
+      <img src="agp-logo-main.png" alt="AGP" style="width:180px;margin:20px 0">
+      <h1>Migrar datos locales a Firebase</h1>
+      <p>Utiliza esta herramienta una sola vez si deseas reemplazar la base de Firebase con los registros guardados anteriormente en este navegador.</p>
+      <pre id="migrationPreview"></pre>
+      <button id="migrateButton">Migrar a Firebase</button>
+      <span id="migrationStatus"></span>
+    </section>
+  </main>
+  <script type="module" src="migration.js?v=2.0"></script>
+</body>
+</html>

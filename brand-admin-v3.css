@@ -1,0 +1,254 @@
+
+:root{
+  --navy:#0D1B2A!important;
+  --navy2:#153A5C!important;
+  --teal:#FF8A00!important;
+  --teal2:#FFB45C!important;
+  --surface:#FFFFFF!important;
+  --soft:#F4F6F8!important;
+  --line:#E2E7EC!important;
+  --ink:#0D1B2A!important;
+  --muted:#64748B!important;
+}
+body{background:#F3F5F7!important;color:#0D1B2A!important}
+.sidebar{background:linear-gradient(180deg,#08131F,#0D1B2A 58%,#153A5C)!important}
+.sidebar:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 68%,rgba(255,138,0,.13));pointer-events:none}
+.sidebar .brand img{width:190px!important;height:76px!important;object-fit:contain!important;filter:brightness(0) invert(1)}
+.nav-item.active,.nav-item:hover{background:rgba(255,138,0,.16)!important;border-color:rgba(255,138,0,.28)!important;color:#fff!important}
+.nav-item.active .nav-icon{color:#FF9D2E!important}
+.primary-btn,.btn-primary{background:linear-gradient(135deg,#FF980F,#FF7600)!important;color:#fff!important;box-shadow:0 12px 28px rgba(255,138,0,.22)!important}
+.kpi-card,.panel,.table-card,.form-card{border-color:#E2E7EC!important;box-shadow:0 10px 35px rgba(13,27,42,.06)!important}
+.kpi-card:before{background:#FF8A00!important}
+.badge-success{background:#E8F7EF!important;color:#137A4B!important}
+.badge-warning{background:#FFF1DE!important;color:#A95300!important}
+.badge-info{background:#EAF1F7!important;color:#153A5C!important}
+input:focus,select:focus,textarea:focus{border-color:#FF8A00!important;box-shadow:0 0 0 4px rgba(255,138,0,.12)!important}
+.scenario-card.active{border-color:#FF8A00!important;background:rgba(255,138,0,.15)!important;box-shadow:0 0 0 2px rgba(255,138,0,.08)!important}
+.scenario-card[data-price-strategy="neighborhood"]{border-color:rgba(255,138,0,.4)!important;background:rgba(255,138,0,.08)!important}
+.plan-status.is-warning{background:rgba(255,138,0,.14)!important;border-color:rgba(255,138,0,.32)!important}
+.pdf-template-card:hover,.pdf-template-card.recommended{border-color:#FF8A00!important}
+.pdf-template-tag{background:#FFF0DC!important;color:#A84F00!important}
+@media(max-width:900px){
+  .sidebar .brand img{filter:none!important;background:#fff!important;border-radius:14px!important;padding:5px!important}
+}
+
+
+/* =========================================================
+   AGP Platform 3.0.1 — Dark mode + mobile sidebar correction
+   ========================================================= */
+
+/* The v3 brand variables must also have a real dark variant. */
+html[data-theme="dark"]{
+  --navy:#08131F!important;
+  --navy2:#153A5C!important;
+  --teal:#FF8A00!important;
+  --teal2:#FFB45C!important;
+  --surface:#101A29!important;
+  --soft:#162235!important;
+  --line:#2A3A50!important;
+  --ink:#F5F7FA!important;
+  --muted:#A8B4C4!important;
+
+  --bg:#080F19!important;
+  --panel:#101A29!important;
+  --panel2:#162235!important;
+  --text:#F5F7FA!important;
+  --primary:#FF8A00!important;
+  --primary2:#FF9E2B!important;
+  --success:#55D889!important;
+  --warning:#FFB45C!important;
+  --danger:#FF7474!important;
+  --sidebar:#08131F!important;
+  --sidebarText:#F4F7FA!important;
+}
+
+/* Core dark surfaces and text contrast. */
+html[data-theme="dark"] body,
+html[data-theme="dark"] #app,
+html[data-theme="dark"] .main{
+  background:#080F19!important;
+  color:#F5F7FA!important;
+}
+
+html[data-theme="dark"] .topbar{
+  background:rgba(16,26,41,.94)!important;
+  border-color:#2A3A50!important;
+}
+
+html[data-theme="dark"] .topbar h1,
+html[data-theme="dark"] .section-head h3,
+html[data-theme="dark"] .card h2,
+html[data-theme="dark"] .card h3,
+html[data-theme="dark"] .kpi .value,
+html[data-theme="dark"] .summary-box h2,
+html[data-theme="dark"] .detail-item strong,
+html[data-theme="dark"] .data-table td,
+html[data-theme="dark"] .modal-head h2,
+html[data-theme="dark"] .drawer-head h2{
+  color:#F7F9FC!important;
+}
+
+html[data-theme="dark"] .topbar p,
+html[data-theme="dark"] .kpi .label,
+html[data-theme="dark"] .eyebrow,
+html[data-theme="dark"] .detail-item span,
+html[data-theme="dark"] .field label,
+html[data-theme="dark"] .bar-label,
+html[data-theme="dark"] .empty{
+  color:#A8B4C4!important;
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .kpi-card,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .table-card,
+html[data-theme="dark"] .form-card,
+html[data-theme="dark"] .modal-card,
+html[data-theme="dark"] .drawer{
+  background:#101A29!important;
+  border-color:#2A3A50!important;
+  color:#F5F7FA!important;
+  box-shadow:0 15px 42px rgba(0,0,0,.28)!important;
+}
+
+html[data-theme="dark"] .detail-item,
+html[data-theme="dark"] .data-table th,
+html[data-theme="dark"] .progress,
+html[data-theme="dark"] .icon-btn,
+html[data-theme="dark"] .secondary-btn,
+html[data-theme="dark"] .mini-btn,
+html[data-theme="dark"] .tab-btn{
+  background:#162235!important;
+  border-color:#2A3A50!important;
+  color:#E8EDF4!important;
+}
+
+html[data-theme="dark"] .data-table tr:hover td{
+  background:#152338!important;
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] .search input,
+html[data-theme="dark"] .quote-item input{
+  background:#0C1624!important;
+  border-color:#304157!important;
+  color:#F5F7FA!important;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder{
+  color:#78889C!important;
+}
+
+html[data-theme="dark"] .kpi .delta,
+html[data-theme="dark"] .badge.success{
+  color:#67E099!important;
+}
+
+html[data-theme="dark"] .progress span,
+html[data-theme="dark"] .bar{
+  background:linear-gradient(180deg,#FF8A00,#FFB45C)!important;
+}
+
+html[data-theme="dark"] .section-head,
+html[data-theme="dark"] .modal-head,
+html[data-theme="dark"] .drawer-head,
+html[data-theme="dark"] .form-actions{
+  border-color:#2A3A50!important;
+}
+
+/* Keep commercial summary readable in both themes. */
+html[data-theme="dark"] .summary-box{
+  background:linear-gradient(145deg,#08131F,#153A5C)!important;
+  color:#FFFFFF!important;
+}
+html[data-theme="dark"] .summary-box *{
+  color:inherit;
+}
+html[data-theme="dark"] .summary-box .summary-line span{
+  color:#C6D0DD!important;
+}
+
+/* Sidebar must sit above the dimming overlay on mobile.
+   Previously the overlay intercepted the first tap. */
+@media(max-width:820px){
+  .sidebar{
+    z-index:80!important;
+    pointer-events:auto!important;
+  }
+  .sidebar.show{
+    left:0!important;
+    visibility:visible!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+  }
+  .overlay{
+    z-index:50!important;
+  }
+  .modal{
+    z-index:100!important;
+  }
+  .drawer{
+    z-index:110!important;
+  }
+
+  /* Sidebar logo and navigation remain fully visible while open. */
+  .sidebar.show,
+  .sidebar.show *{
+    pointer-events:auto!important;
+  }
+  .sidebar.show .brand,
+  .sidebar.show nav,
+  .sidebar.show .sidebar-foot{
+    position:relative;
+    z-index:82!important;
+    opacity:1!important;
+  }
+}
+
+/* Rebrand the legacy green accents that remained in dashboard KPIs. */
+.kpi .delta,
+.pipeline-row strong{
+  color:#D96F00!important;
+}
+html[data-theme="dark"] .kpi .delta,
+html[data-theme="dark"] .pipeline-row strong{
+  color:#FFB45C!important;
+}
+
+
+/* AGP Platform 3.0.2 — microinteractions */
+.kpi-card,.panel,.table-card,.form-card,.card{
+  transition:transform 220ms cubic-bezier(.22,.8,.22,1),box-shadow 220ms ease,border-color 220ms ease;
+}
+.kpi-card:hover,.panel:hover,.table-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 42px rgba(13,27,42,.10)!important;
+}
+.nav-item{
+  transition:background 180ms ease,border-color 180ms ease,transform 180ms ease,color 180ms ease;
+}
+.nav-item:hover{transform:translateX(3px)}
+.primary-btn,.secondary-btn,.icon-btn,.mini-btn{
+  transition:transform 160ms ease,box-shadow 160ms ease,filter 160ms ease;
+}
+.primary-btn:hover,.secondary-btn:hover,.icon-btn:hover,.mini-btn:hover{
+  transform:translateY(-2px);
+}
+.primary-btn:active,.secondary-btn:active,.icon-btn:active,.mini-btn:active{
+  transform:scale(.98);
+}
+.modal.show .modal-card,.drawer.show{
+  animation:agpPanelIn 340ms cubic-bezier(.22,.8,.22,1) both;
+}
+@keyframes agpPanelIn{
+  from{opacity:0;transform:translateY(18px) scale(.985)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@media(prefers-reduced-motion:reduce){
+  .kpi-card,.panel,.table-card,.form-card,.card,.nav-item,.primary-btn,.secondary-btn,.icon-btn,.mini-btn{
+    transition:none!important;
+  }
+}

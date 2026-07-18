@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0D1B2A">
+  <meta name="description" content="AGP Control Integral: inventarios físicos, control de activos y auditoría operativa en Lima y Perú.">
+  <title>AGP Control Integral | Inventarios y control operativo</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css?v=2.0.2">
+
+
+  <style id="agp-mobile-menu-stable">
+    .agp-mobile-overlay{display:none}
+    @media(max-width:900px){
+      .desktop-nav{display:none!important}
+      .site-header{height:72px!important;min-height:72px!important}
+      .nav-wrap{height:72px!important;min-height:72px!important}
+      .brand-logo{width:158px!important;height:48px!important}
+      .menu-toggle{
+        display:flex!important;
+        flex-direction:column!important;
+        justify-content:center!important;
+        align-items:center!important;
+        gap:5px!important;
+        width:46px!important;
+        height:46px!important;
+        padding:0!important;
+        margin:0!important;
+        border:1px solid #dce6eb!important;
+        border-radius:14px!important;
+        background:#fff!important;
+        position:relative!important;
+        z-index:9000!important;
+      }
+      .menu-toggle span{
+        display:block!important;
+        width:23px!important;
+        height:2px!important;
+        margin:0!important;
+        background:#0b1f33!important;
+        border-radius:99px!important;
+        transform:none!important;
+        opacity:1!important;
+      }
+
+      .agp-mobile-overlay{
+        position:fixed!important;
+        inset:0!important;
+        z-index:99999!important;
+        width:100vw!important;
+        height:100dvh!important;
+        min-height:100vh!important;
+        background:linear-gradient(160deg,#f9fcfd 0%,#eef6f7 100%)!important;
+        color:#0b1f33!important;
+        overflow-y:auto!important;
+        overscroll-behavior:contain!important;
+        -webkit-overflow-scrolling:touch!important;
+        padding:max(16px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))!important;
+      }
+      .agp-mobile-overlay.is-open{
+        display:flex!important;
+        flex-direction:column!important;
+      }
+      .agp-mobile-overlay[hidden]{display:none!important}
+
+      .agp-mobile-overlay__top{
+        display:flex!important;
+        align-items:center!important;
+        justify-content:space-between!important;
+        min-height:60px!important;
+        padding:0 0 18px!important;
+        border-bottom:1px solid #d8e4e9!important;
+      }
+      .agp-mobile-overlay__top img{
+        width:164px!important;
+        height:48px!important;
+        object-fit:contain!important;
+        object-position:left center!important;
+      }
+      #agpMobileClose{
+        width:48px!important;
+        height:48px!important;
+        border:0!important;
+        border-radius:15px!important;
+        background:#e7eff3!important;
+        color:#0b1f33!important;
+        font-size:34px!important;
+        font-weight:300!important;
+        line-height:1!important;
+        display:grid!important;
+        place-items:center!important;
+      }
+
+      .agp-mobile-overlay__content{
+        display:flex!important;
+        flex:1!important;
+        flex-direction:column!important;
+        padding:30px 0 0!important;
+      }
+      .agp-mobile-overlay__eyebrow{
+        margin:0 4px 13px!important;
+        color:#168e84!important;
+        font-size:11px!important;
+        font-weight:900!important;
+        letter-spacing:.17em!important;
+        text-transform:uppercase!important;
+      }
+      .agp-mobile-overlay__links{
+        display:grid!important;
+        gap:11px!important;
+      }
+      .agp-mobile-overlay__links a{
+        display:flex!important;
+        align-items:center!important;
+        justify-content:space-between!important;
+        min-height:66px!important;
+        padding:0 18px!important;
+        border:1px solid #d8e4e9!important;
+        border-radius:18px!important;
+        background:#fff!important;
+        color:#0b1f33!important;
+        text-decoration:none!important;
+        box-shadow:0 8px 25px rgba(11,31,51,.05)!important;
+      }
+      .agp-mobile-overlay__links a span{
+        font-size:18px!important;
+        font-weight:850!important;
+      }
+      .agp-mobile-overlay__links a b{
+        font-size:11px!important;
+        color:#2bb7a9!important;
+        letter-spacing:.08em!important;
+      }
+
+      .agp-mobile-overlay__portal{
+        margin-top:auto!important;
+        padding:24px 20px!important;
+        border-radius:20px!important;
+        background:#0b1f33!important;
+        color:#fff!important;
+        display:grid!important;
+        gap:7px!important;
+      }
+      .agp-mobile-overlay__portal span{
+        color:#72d9ce!important;
+        font-size:10px!important;
+        font-weight:900!important;
+        letter-spacing:.14em!important;
+        text-transform:uppercase!important;
+      }
+      .agp-mobile-overlay__portal strong{
+        font-size:15px!important;
+      }
+      .agp-mobile-overlay__portal a{
+        margin-top:8px!important;
+        color:#fff!important;
+        font-size:14px!important;
+        font-weight:900!important;
+        text-decoration:none!important;
+      }
+      body.agp-menu-open{
+        overflow:hidden!important;
+        position:fixed!important;
+        width:100%!important;
+      }
+    }
+    @media(min-width:901px){
+      .agp-mobile-overlay{display:none!important}
+      .desktop-nav{display:flex!important}
+    }
+  </style>
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="brand-v3.css?v=3.0.2">
+  <link rel="stylesheet" href="motion-v3.css?v=3.0.2">
+
+  <script>
+    (() => {
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+      const forceTop = () => {
+        if (!location.hash) window.scrollTo(0, 0);
+      };
+      forceTop();
+      document.addEventListener("DOMContentLoaded", forceTop, { once:true });
+      window.addEventListener("pageshow", event => {
+        if (!location.hash && (event.persisted || window.scrollY > 0)) {
+          requestAnimationFrame(() => window.scrollTo(0, 0));
+        }
+      });
+    })();
+  </script>
+
+</head>
+<body class="agp-loading">
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="AGP Control Integral">
+        <img src="agp-logo-main.png" alt="Logo AGP Control Integral" class="brand-logo">
+      </a>
+
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="agpMobileOverlay">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav desktop-nav" id="mainNav">
+        <a href="#servicios">Servicios</a>
+        <a href="#metodologia">Cómo trabajamos</a>
+        <a href="#diagnostico">Diagnóstico gratuito</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="agpMobileOverlay" class="agp-mobile-overlay" hidden aria-hidden="true">
+    <div class="agp-mobile-overlay__top">
+      <img src="agp-logo-main.png" alt="AGP Control Integral">
+      <button type="button" id="agpMobileClose" aria-label="Cerrar menú">×</button>
+    </div>
+
+    <div class="agp-mobile-overlay__content">
+      <span class="agp-mobile-overlay__eyebrow">Navegación</span>
+      <nav class="agp-mobile-overlay__links" aria-label="Menú móvil">
+        <a href="#servicios"><span>Servicios</span><b>01</b></a>
+        <a href="#metodologia"><span>Cómo trabajamos</span><b>02</b></a>
+        <a href="#diagnostico"><span>Diagnóstico gratuito</span><b>03</b></a>
+        <a href="#contacto"><span>Contacto</span><b>04</b></a>
+      </nav>
+
+      <div class="agp-mobile-overlay__portal">
+        <span>Portal privado</span>
+        <strong>Acceso para clientes y colaboradores</strong>
+        <a href="login.html">Ingresar a AGP Platform →</a>
+      </div>
+    </div>
+  </div>
+
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <span class="eyebrow">Inventarios físicos · Activos · Auditoría operativa</span>
+          <h1>Inventarios precisos. Decisiones más inteligentes.</h1>
+          <p>
+            Ejecutamos inventarios organizados, apoyados en tecnología y con reportes claros.
+            Desde una sede hasta operaciones multisede en Lima y todo el Perú.
+          </p>
+          <div class="hero-actions">
+            <a href="#diagnostico" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
+            <a href="#contacto" class="btn btn-secondary">Hablar con un asesor</a>
+          </div>
+          <div class="trust-row">
+            <div><strong>Precisión</strong><span>Procesos de conteo y validación</span></div>
+            <div><strong>Trazabilidad</strong><span>Resultados organizados y auditables</span></div>
+            <div><strong>Respuesta</strong><span>Propuestas adaptadas al alcance real</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <span class="status-dot"></span>
+            <span>Evaluación inicial</span>
+          </div>
+          <div class="metric-card">
+            <span>Tipo de servicio</span>
+            <strong>Inventario físico</strong>
+          </div>
+          <div class="metric-card">
+            <span>Modalidad</span>
+            <strong>Servicio adaptado a tu negocio</strong>
+          </div>
+          <div class="metric-card">
+            <span>Entregable</span>
+            <strong>Resultados claros y archivo digital</strong>
+          </div>
+          <div class="hero-card-footer">
+            <span>Cuéntanos lo que necesitas y recibe una evaluación personalizada.</span>
+            <a href="#diagnostico">Empezar →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="servicios">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow dark">Servicios</span>
+          <h2>Control operativo de principio a fin</h2>
+          <p>Diseñamos el servicio según el volumen, complejidad, ubicación y nivel de análisis requerido.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="service-card">
+            <div class="icon-box">01</div>
+            <h3>Inventario de mercadería</h3>
+            <p>Conteo físico, captura por código, consolidación, diferencias y base final.</p>
+            <ul><li>Retail y almacenes</li><li>Conteos generales o cíclicos</li><li>Operaciones multisede</li></ul>
+          </article>
+          <article class="service-card featured">
+            <span class="tag">Más solicitado</span>
+            <div class="icon-box">02</div>
+            <h3>Control de activos fijos</h3>
+            <p>Levantamiento, identificación, ubicación, estado y conciliación de activos.</p>
+            <ul><li>Etiquetado y codificación</li><li>Registro fotográfico opcional</li><li>Base patrimonial estructurada</li></ul>
+          </article>
+          <article class="service-card">
+            <div class="icon-box">03</div>
+            <h3>Auditoría operativa</h3>
+            <p>Revisión independiente de procesos, existencias, diferencias y oportunidades de mejora.</p>
+            <ul><li>Muestreo o revisión integral</li><li>Hallazgos priorizados</li><li>Reporte ejecutivo</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="metodologia">
+      <div class="container process-layout">
+        <div class="section-heading left">
+          <span class="eyebrow dark">Metodología AGP</span>
+          <h2>No solo contamos. Validamos, analizamos y entregamos control.</h2>
+          <p>Cada propuesta se ajusta al contexto real para evitar sobrecostos y promesas poco realistas.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><span>1</span><div><h3>Diagnóstico</h3><p>Volumen, sedes, horarios, base maestra, equipos y entregables.</p></div></div>
+          <div class="step"><span>2</span><div><h3>Plan operativo</h3><p>Personal, supervisión, cronograma, validaciones y contingencias.</p></div></div>
+          <div class="step"><span>3</span><div><h3>Ejecución</h3><p>Captura trazable, control de calidad y seguimiento del avance.</p></div></div>
+          <div class="step"><span>4</span><div><h3>Entrega</h3><p>Base consolidada, diferencias, hallazgos y recomendaciones.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section diagnosis-section" id="diagnostico">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow light">Evaluación sin costo</span>
+          <h2>Solicita un diagnóstico gratuito para tu inventario</h2>
+          <p>Analizamos tu negocio, estimamos el tiempo y el equipo necesario, y te enviamos una propuesta personalizada sin compromiso.</p>
+        </div>
+
+        <div class="diagnosis-shell">
+          <form class="diagnosis-form" id="diagnosisForm">
+            <div class="diagnosis-progress">
+              <span class="active"></span><span></span><span></span><span></span>
+              <small>Completar toma aproximadamente 2 minutos</small>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section-title"><span>1</span><div><strong>Cuéntanos sobre tu negocio</strong><small>Esto nos permite recomendar el tipo de operación adecuado.</small></div></div>
+              <div class="fields-grid">
+                <label>
+                  <span>Tipo de negocio</span>
+                  <select id="businessType" required>
+                    <option value="farmacia">Farmacia independiente</option>
+                    <option value="bodega">Bodega</option>
+                    <option value="minimarket">Minimarket</option>
+                    <option value="ferreteria">Ferretería</option>
+                    <option value="retail">Tienda / retail</option>
+                    <option value="almacen">Almacén</option>
+                    <option value="otro">Otro negocio</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Servicio que necesitas</span>
+                  <select id="service">
+                    <option value="SER-001">Inventario de mercadería</option>
+                    <option value="SER-003">Inventario de activos fijos</option>
+                    <option value="SER-002">Auditoría o validación</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Cantidad aproximada de productos</span>
+                  <select id="quantityRange">
+                    <option value="500">Menos de 500</option>
+                    <option value="1000" selected>Entre 500 y 1,500</option>
+                    <option value="3000">Entre 1,500 y 5,000</option>
+                    <option value="7500">Entre 5,000 y 10,000</option>
+                    <option value="15000">Más de 10,000</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Número de locales o sedes</span>
+                  <input id="sites" type="number" min="1" value="1" required>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section-title"><span>2</span><div><strong>Condiciones del inventario</strong><small>No necesitas conocer datos exactos; selecciona lo más cercano.</small></div></div>
+              <div class="fields-grid">
+                <label>
+                  <span>¿Los productos tienen código de barras?</span>
+                  <select id="barcodes">
+                    <option value="yes">Sí, la mayoría</option>
+                    <option value="partial">Solo algunos</option>
+                    <option value="no">No tienen código</option>
+                  </select>
+                </label>
+                <label>
+                  <span>¿Qué tan ordenado está el negocio?</span>
+                  <select id="organization">
+                    <option value="high">Ordenado por categorías</option>
+                    <option value="medium" selected>Parcialmente ordenado</option>
+                    <option value="low">Desordenado o sin ubicación definida</option>
+                  </select>
+                </label>
+                <label>
+                  <span>¿Necesitas revisar lotes o vencimientos?</span>
+                  <select id="lots">
+                    <option value="no">No</option>
+                    <option value="yes">Sí</option>
+                    <option value="unknown">No estoy seguro</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Horario preferido</span>
+                  <select id="schedule">
+                    <option value="day">Durante el día</option>
+                    <option value="after">Después del cierre</option>
+                    <option value="weekend">Fin de semana</option>
+                    <option value="flexible">Flexible</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section-title"><span>3</span><div><strong>¿Qué resultado necesitas?</strong><small>Podemos adaptar el servicio para mantenerlo accesible.</small></div></div>
+              <div class="diagnosis-options">
+                <label><input type="checkbox" id="basicReport" checked><span><strong>Conteo + archivo Excel</strong><small>La opción más económica para pequeños negocios.</small></span></label>
+                <label><input type="checkbox" id="conciliation"><span><strong>Comparación con mi sistema</strong><small>Identifica faltantes y sobrantes.</small></span></label>
+                <label><input type="checkbox" id="expiry"><span><strong>Control de lotes y vencimientos</strong><small>Recomendado para farmacias.</small></span></label>
+                <label><input type="checkbox" id="executive"><span><strong>Informe ejecutivo</strong><small>Resumen de hallazgos y recomendaciones.</small></span></label>
+              </div>
+            </div>
+
+            <div class="form-section contact-data">
+              <div class="form-section-title"><span>4</span><div><strong>¿A dónde enviamos la evaluación?</strong><small>Un asesor revisará el caso antes de indicarte un precio.</small></div></div>
+              <div class="fields-grid">
+                <label><span>Nombre del negocio</span><input id="leadCompany" type="text" placeholder="Ej. Farmacia San José" required></label>
+                <label><span>Tu nombre</span><input id="leadContact" type="text" placeholder="Nombre completo" required></label>
+                <label><span>Celular / WhatsApp</span><input id="leadPhone" type="tel" inputmode="tel" placeholder="999 999 999" required></label>
+                <label><span>Correo (opcional)</span><input id="leadEmail" type="email" placeholder="correo@ejemplo.com"></label>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-full diagnosis-submit" type="submit">
+              Solicitar evaluación gratuita
+              <span aria-hidden="true">→</span>
+            </button>
+            <small class="diagnosis-privacy">Sin compromiso y sin mostrar precios automáticos. Revisamos cada solicitud antes de preparar la propuesta.</small>
+          </form>
+
+          <aside class="diagnosis-benefits">
+            <span class="benefit-kicker">Lo que recibirás</span>
+            <h3>Una recomendación preparada para tu negocio</h3>
+            <div class="benefit-list">
+              <div><span>01</span><div><strong>Tiempo aproximado</strong><small>Cuántas horas o jornadas tomaría.</small></div></div>
+              <div><span>02</span><div><strong>Equipo recomendado</strong><small>Cuántas personas serían necesarias.</small></div></div>
+              <div><span>03</span><div><strong>Servicio adecuado</strong><small>Solo lo necesario para evitar sobrecostos.</small></div></div>
+              <div><span>04</span><div><strong>Propuesta personalizada</strong><small>Un precio revisado por un asesor de AGP.</small></div></div>
+            </div>
+            <div class="neighborhood-note">
+              <strong>¿Tienes un pequeño comercio o una farmacia independiente?</strong>
+              <p>Contamos con un Plan Esencial para pequeños comercios: conteo, archivo Excel y reporte de diferencias, sin agregar servicios que no necesitas.</p>
+            </div>
+            <button class="btn btn-whatsapp btn-full" id="diagnosisWhatsapp" type="button">
+              Consultar directamente por WhatsApp
+            </button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto">
+      <div class="container contact-box">
+        <div>
+          <span class="eyebrow dark">Conversemos</span>
+          <h2>¿Necesitas una propuesta formal?</h2>
+          <p>Cuéntanos el alcance y prepararemos una solución operativa ajustada a tus necesidades.</p>
+        </div>
+        <div class="contact-actions">
+          <a href="#" id="contactWhatsapp" class="btn btn-primary">Contactar por WhatsApp</a>
+          <a href="mailto:agpcontrolintegral@gmail.com" class="btn btn-secondary light-bg">agpcontrolintegral@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="#" class="floating-whatsapp" id="floatingWhatsapp" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M19.11 17.24c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.35-1.61-1.51-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26s.98 2.62 1.11 2.8c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.58.66.21 1.25.18 1.72.11.52-.08 1.6-.65 1.83-1.29.23-.63.23-1.17.16-1.29-.07-.11-.25-.18-.52-.32z"/>
+      <path fill="currentColor" d="M16.03 3C8.85 3 3 8.82 3 15.98c0 2.52.73 4.97 2.11 7.08L3 29l6.13-2.02a13 13 0 0 0 6.89 1.89h.01C23.2 28.87 29 23.04 29 15.9 29 8.75 23.2 3 16.03 3zm0 23.68h-.01a10.76 10.76 0 0 1-5.49-1.5l-.39-.23-3.64 1.2 1.22-3.54-.25-.4a10.7 10.7 0 0 1-1.65-5.71c0-5.93 4.84-10.75 10.81-10.75 2.89 0 5.6 1.12 7.64 3.15a10.67 10.67 0 0 1 3.17 7.61c0 5.93-4.85 10.17-10.81 10.17z"/>
+    </svg>
+  </a>
+
+  <footer>
+    <div class="container footer-layout">
+      <img src="agp-logo-main.png" alt="AGP Control Integral" class="footer-logo">
+      <p>Inventarios físicos, activos y control operativo.</p>
+      <div class="footer-access">
+        <a href="login.html">Portal AGP</a>
+        <small>Acceso para clientes y colaboradores</small>
+      </div>
+      <span>© <span id="year"></span> AGP Control Integral · AGP Platform 3.0.2 · Motion</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="pricing-engine.js?v=2.0.3"></script>
+  <script type="module" src="app.js?v=2.0.3"></script>
+
+
+  <script id="agp-mobile-menu-controller">
+  (() => {
+    "use strict";
+
+    const init = () => {
+      const openButton = document.getElementById("menuToggle");
+      const closeButton = document.getElementById("agpMobileClose");
+      const overlay = document.getElementById("agpMobileOverlay");
+      if (!openButton || !closeButton || !overlay) return;
+
+      let savedScrollY = 0;
+
+      const openMenu = () => {
+        savedScrollY = window.scrollY || 0;
+        overlay.hidden = false;
+        overlay.classList.add("is-open");
+        overlay.setAttribute("aria-hidden","false");
+        openButton.setAttribute("aria-expanded","true");
+        document.body.style.top = `-${savedScrollY}px`;
+        document.body.classList.add("agp-menu-open");
+      };
+
+      const closeMenu = () => {
+        overlay.classList.remove("is-open");
+        overlay.setAttribute("aria-hidden","true");
+        openButton.setAttribute("aria-expanded","false");
+        document.body.classList.remove("agp-menu-open");
+        document.body.style.top = "";
+        overlay.hidden = true;
+        window.scrollTo(0,savedScrollY);
+      };
+
+      openButton.onclick = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        openMenu();
+      };
+      closeButton.onclick = closeMenu;
+
+      overlay.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && !overlay.hidden) closeMenu();
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900 && !overlay.hidden) closeMenu();
+      }, {passive:true});
+
+      window.addEventListener("pageshow", () => {
+        overlay.hidden = true;
+        overlay.classList.remove("is-open");
+        document.body.classList.remove("agp-menu-open");
+        document.body.style.top = "";
+        openButton.setAttribute("aria-expanded","false");
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init, {once:true});
+    } else {
+      init();
+    }
+  })();
+  </script>
+
+
+  <script id="agp-motion-controller">
+  (() => {
+    "use strict";
+
+    const init = () => {
+      document.body.classList.remove("agp-loading");
+      document.body.classList.add("agp-ready");
+
+      const candidates = [
+        ".hero-copy > *",
+        ".hero-card",
+        ".section-heading",
+        ".service-card",
+        ".step",
+        ".diagnosis-form",
+        ".diagnosis-benefits",
+        ".contact-box",
+        ".footer-layout > *"
+      ];
+
+      const elements = document.querySelectorAll(candidates.join(","));
+      elements.forEach((el, index) => {
+        el.classList.add("reveal-on-scroll");
+        el.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 70}ms`);
+      });
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.13, rootMargin: "0px 0px -6% 0px" });
+
+      elements.forEach(el => observer.observe(el));
+
+      const whatsapp = document.getElementById("floatingWhatsapp");
+      if (whatsapp) {
+        setTimeout(() => whatsapp.classList.add("whatsapp-entered"), 700);
+        whatsapp.addEventListener("mouseenter", () => whatsapp.classList.add("is-hovered"));
+        whatsapp.addEventListener("mouseleave", () => whatsapp.classList.remove("is-hovered"));
+      }
+
+      document.querySelectorAll(".btn, .service-card, .step, .benefit-list > div").forEach(el => {
+        el.addEventListener("pointerdown", () => el.classList.add("is-pressed"));
+        ["pointerup","pointerleave","pointercancel"].forEach(evt => {
+          el.addEventListener(evt, () => el.classList.remove("is-pressed"));
+        });
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init, { once:true });
+    } else {
+      init();
+    }
+  })();
+  </script>
+
+</body>
+</html>
