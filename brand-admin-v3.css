@@ -311,3 +311,16 @@ html[data-theme="dark"] .commercial-flow{background:#101A29!important;border-col
     filter:none!important;
   }
 }
+
+
+/* AGP v3.2.2 — sidebar logo contrast */
+.sidebar .brand img{
+  opacity:1!important;
+  visibility:visible!important;
+  filter:none!important;
+  background:transparent!important;
+  mix-blend-mode:normal!important;
+}
+.sidebar .brand{
+  background:transparent!important;
+}

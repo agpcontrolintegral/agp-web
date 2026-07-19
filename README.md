@@ -195,3 +195,11 @@ Lead → Contactado → Calificado → Cliente → Oportunidad → Cotización �
 - Eliminación de filtros CSS que convertían el logo en una placa blanca.
 - Encabezado de marca simplificado como AGP Platform.
 - Ajustes independientes para escritorio y móvil.
+
+
+## v3.2.2 — Corrección definitiva de contraste del logo
+- `agp-logo-color.png`: web comercial, login, footer y fondos claros.
+- `agp-logo-sidebar.png`: uso exclusivo en el sidebar oscuro del ERP.
+- `agp-logo-main.png`: alias compatible de la versión a color.
+- Se eliminaron opacidades, filtros y mezclas de color en todos los logos.
+- Referencias HTML separadas para evitar volver a intercambiar variantes.
