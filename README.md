@@ -187,3 +187,11 @@ La nueva navegación:
 
 ## v3.2 Flujo comercial
 Lead → Contactado → Calificado → Cliente → Oportunidad → Cotización → Decisión → Proyecto → Cierre.
+
+
+## v3.2.1 — Corrección del logo del ERP
+- Logo de sidebar reconstruido con transparencia real.
+- Nueva variante blanca para fondos oscuros.
+- Eliminación de filtros CSS que convertían el logo en una placa blanca.
+- Encabezado de marca simplificado como AGP Platform.
+- Ajustes independientes para escritorio y móvil.

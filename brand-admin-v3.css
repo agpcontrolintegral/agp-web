@@ -258,3 +258,56 @@ html[data-theme="dark"] .pipeline-row strong{
 .mini-btn.primary-action{background:#EAF1F7!important;color:#153A5C!important;border-color:#C7D7E5!important}.mini-btn.convert-action{background:#FFF0DC!important;color:#A84F00!important;border-color:#FFD09A!important;font-weight:900}.mini-btn.accept-action{background:#E8F7EF!important;color:#137A4B!important;border-color:#BDE7CF!important;font-weight:900}.row-actions{flex-wrap:wrap;gap:6px}
 html[data-theme="dark"] .commercial-flow{background:#101A29!important;border-color:#2A3A50!important}html[data-theme="dark"] .flow-step span{background:#162235;border-color:#304157}html[data-theme="dark"] .flow-step:not(:last-child)::after{background:#304157}html[data-theme="dark"] .mini-btn.primary-action{background:#1B3046!important;color:#BFD8EE!important;border-color:#304E69!important}html[data-theme="dark"] .mini-btn.convert-action{background:#3B2A15!important;color:#FFBF73!important;border-color:#6A471C!important}html[data-theme="dark"] .mini-btn.accept-action{background:#153425!important;color:#7BE0A7!important;border-color:#285D42!important}
 @media(max-width:820px){.commercial-flow{grid-template-columns:repeat(8,100px);padding:12px}.row-actions{min-width:260px}}
+
+
+/* AGP Platform v3.2.1 — sidebar logo correction */
+.sidebar .brand{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:10px!important;
+  align-items:start!important;
+  padding:18px 16px 14px!important;
+}
+.sidebar .brand img{
+  display:block!important;
+  width:100%!important;
+  max-width:205px!important;
+  height:auto!important;
+  max-height:82px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  padding:0!important;
+  margin:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  filter:none!important;
+  mix-blend-mode:normal!important;
+}
+.sidebar .brand-copy{
+  display:grid!important;
+  gap:2px!important;
+  padding-left:2px!important;
+}
+.sidebar .brand-copy strong{
+  color:#FFFFFF!important;
+  font-size:12px!important;
+  line-height:1.2!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+}
+.sidebar .brand-copy span{
+  color:#A8B4C4!important;
+  font-size:10px!important;
+  letter-spacing:.05em!important;
+}
+@media(max-width:820px){
+  .sidebar .brand img{
+    width:190px!important;
+    max-width:190px!important;
+    height:auto!important;
+    background:transparent!important;
+    padding:0!important;
+    border-radius:0!important;
+    filter:none!important;
+  }
+}
